@@ -171,6 +171,11 @@ class Game:
                     print("> case updated : ", self.grid[row][column])
         self.print_grid()
 
+    # Max min algorithm
+    def max_min(self, array, n, k):
+        array = sorted(array)
+        return min(array[a + k - 1] - array[a] for a in range(n - k + 1))
+
 "This would create first object of Game class"
 print("> Choose your grid size by typing row and column number.")
 row = int(input("> Row : "))
